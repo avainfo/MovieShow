@@ -6,11 +6,7 @@ import {useState} from "react";
 
 export default function App() {
 	// Création de l'état infos
-<<<<<<< HEAD
 	const [infos, setInfos] = useState({});
-=======
-	const [infos, setInfos] = useState({})
->>>>>>> b8b79a9b7e828d22fc9e135a5ac53d4aadeaaa68
 
 	return (
 		<View style={styles.container}>
