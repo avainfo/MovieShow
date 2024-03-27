@@ -1,8 +1,13 @@
 import {Button, Image, View} from "react-native";
 import Form from "./components/Form";
 import styles from "./styles/Styles";
+import {useState} from "react";
+
 
 export default function App() {
+	// Création du state infos
+	const [infos, setInfos] = useState({})
+
 	return (
 		<View style={styles.container}>
 			<Image source={require("./assets/images/img.png")} style={styles.img}/>
@@ -15,9 +20,15 @@ export default function App() {
 							min: 0,
 							max: 100,
 						},
-					}
-				}}/>
-			<Button title={"Register"} onPress={() => console.log("Informations : ")}/>
+					},
+				}}
+				// Le paramètre onFunctionPress qui seras éxécuté quand il y aura un évènement
+				onFunctionPress={(nouvelleInfo) => {setInfos({...infos, ...nouvelleInfo})}}
+			/>
+			<Button title={"Register"} onPress={() => {
+				console.log("Informations : ")
+				console.log(infos)
+			}}/>
 		</View>
 	);
 }

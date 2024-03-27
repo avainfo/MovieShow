@@ -31,9 +31,10 @@ class Form extends Component {
 					key={key}
 					style={styles.input}
 					inputMode={"email"}
-					onChangeText={async (text) => {
-						// Quand le texte change on met a jour la variable state avec l'id de l'inputText et sa valeur
-						this.setState({[input.toLowerCase().replaceAll(" ", "")]: text})
+					onChangeText={(text) => {
+						// Quand le texte change on execute la fonction passé en paramètre onFunctionPress avec l'infoName et son text
+						let infoName = input.toLowerCase().replaceAll(" ", "");
+						this.props.onFunctionPress({[infoName]: text});
 					}}
 				/>
 
@@ -88,6 +89,7 @@ class Form extends Component {
 				{/* On ajoute la checkBox ainsi que le text */}
 				<Text><BouncyCheckbox onPress={(isChecked) => {
 					console.log(this.state)
+
 				}}/>Agree with Terms & Conditions</Text>
 			</View>
 		);
