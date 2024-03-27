@@ -5,7 +5,7 @@ import {useState} from "react";
 
 
 export default function App() {
-	// Création du state infos
+	// Création de l'état infos
 	const [infos, setInfos] = useState({})
 
 	return (
