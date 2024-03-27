@@ -17,7 +17,7 @@ export default function App() {
 						},
 					}
 				}}/>
-			<Button title={"Register"}/>
+			<Button title={"Register"} onPress={() => console.log("Informations : ")}/>
 		</View>
 	);
 }
