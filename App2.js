@@ -1,6 +1,7 @@
 import {Button, Dimensions, Image, View} from "react-native";
 import {StyleSheet} from "react-native-web";
 import Form from "./components/Form";
+import styles from "./styles/Styles";
 
 export default function App2() {
     return (
@@ -27,13 +28,3 @@ export default function App2() {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        // backgroundColor: "red",
-    },
-    img: {
-        width: Dimensions.get('window').width,
-        height: 140
-    },
-})

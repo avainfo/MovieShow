@@ -25,15 +25,17 @@ class Form extends Component {
 		// On récupère chaques valeur dans le tableau input
 		for(const input of content.input) {
 			// Création d'un Component TextInput
-			let newInput = <TextInput
-				placeholder={input}
-				key={key}
-				style={styles.input}
-				inputMode={"email"}
-				onChangeText={async(text) => {
-					// Quand le texte change on met a jour la variable state avec l'id de l'inputText et sa valeur
-					this.setState({[key]: text})
-				}}/>
+			let newInput =
+				<TextInput
+					placeholder={input}
+					key={key}
+					style={styles.input}
+					inputMode={"email"}
+					onChangeText={async (text) => {
+						// Quand le texte change on met a jour la variable state avec l'id de l'inputText et sa valeur
+						this.setState({[input.toLowerCase().replaceAll(" ", "")]: text})
+					}}
+				/>
 
 			//Ajouts du nouveau Component dans le tableau d'inputs
 			this.inputs.push(newInput);
