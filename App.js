@@ -7,7 +7,7 @@ import axios from "axios";
 
 export default function App() {
 	// Création de l'état infos
-	const [infos, setInfos] = useState({});
+	const [infos, setInfos] = useState({})
 
 	return (
 		<View style={styles.container}>
